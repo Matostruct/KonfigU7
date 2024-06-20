@@ -8,12 +8,13 @@
     <artifactId>at.fhj.msd</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+
     <developers>
         <developer>
             <id>matiotawdrous</id>
             <name>Matio Tawdrous</name>
             <email>matio.tawdrous@edu.fh-joanneum.at</email>
-            <url>https://www.github.com/Matostruct/</url>
+            <url>https://github.com/Matostruct/KonfigU7</url>
             <organization>FH JOANNEUM GmbH</organization>
             <organizationUrl>https://www.fh-joanneum.at</organizationUrl>
             <roles>
@@ -23,7 +24,22 @@
             <properties>
                 <picUrl>https://avatars.githubusercontent.com/u/56159495?v=4</picUrl>
             </properties>
-        </developer>
+        </developer> <developer>
+        <id>veitkramer-schoeggl</id>
+        <name>Veit Kramer-Schoeggl</name>
+        <email>veitkramer@gmail.com</email>
+        <url>https://github.com/Matostruct/KonfigU7</url>
+        <organization>FH JOANNEUM GmbH</organization>
+        <organizationUrl>https://www.fh-joanneum.at</organizationUrl>
+        <roles>
+            <role>Student Developer</role>
+        </roles>
+        <timezone>Europe/Vienna</timezone>
+        <properties>
+            <picUrl>https://avatars.githubusercontent.com/u/56159495?v=4</picUrl>
+        </properties>
+    </developer>
+
     </developers>
 
     <properties>
