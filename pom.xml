@@ -40,7 +40,21 @@
                 <picUrl>https://avatars.githubusercontent.com/u/56159495?v=4</picUrl>
             </properties>
         </developer>
-
+        <developer>
+            <id>SchabkarGernot</id>
+            <name>Gernot Schabkar</name>
+            <email>gernot.schabkar@edu.fh-joanneum.at</email>
+            <url>https://github.com/SchabkarGernot/</url>
+            <organization>FH JOANNEUM GmbH</organization>
+            <organizationUrl>https://www.fh-joanneum.at</organizationUrl>
+            <roles>
+                <role>Student Developer</role>
+            </roles>
+            <timezone>Europe/Vienna</timezone>
+            <properties>
+                <picUrl>https://avatars.githubusercontent.com/u/163401599?v=4</picUrl>
+            </properties>
+        </developer>
     </developers>
 
     <properties>
