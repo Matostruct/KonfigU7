@@ -11,7 +11,7 @@ public class CocktailTest {
     @Test
     public void testValidCocktail() {
         assertThrows(InputMismatchException.class, () -> {
-
+            //unfinished implementation
         });
     }
 }

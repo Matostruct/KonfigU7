@@ -3,7 +3,7 @@ package at.fhj.msd;
 public class Liquid {
 
     private String name;
-     
+    //should this implement the Drink interface???
     private double volume;
 
     private double alcoholPercent;

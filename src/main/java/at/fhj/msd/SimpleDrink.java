@@ -7,17 +7,17 @@ public class SimpleDrink extends Drink{
     /**
      * uses only one liquid
      */
-    protected Liquid l;
+    protected Liquid liquid;
     /**
      * Creates a SimpleDrink object with given brand name and the
      * liquid it contains
      *
      * @param name name of drink
-     * @param l only liquid in drink
+     * @param liquid only liquid in drink
      */
-    SimpleDrink(String name, Liquid l){
+    SimpleDrink(String name, Liquid liquid){
         super(name);
-        this.l = l;
+        this.liquid = liquid;
     }
 
     /**
@@ -27,7 +27,7 @@ public class SimpleDrink extends Drink{
      */
     @Override
     public double getVolume() {
-        return l.getVolume();
+        return liquid.getVolume();
     }
 
     /**
@@ -37,7 +37,7 @@ public class SimpleDrink extends Drink{
      */
     @Override
     public double getAlcoholPercent() {
-        return l.getAlcoholPercent();
+        return liquid.getAlcoholPercent();
     }
     /**
      * Gives information if drink is alcoholic or not
@@ -46,7 +46,7 @@ public class SimpleDrink extends Drink{
      */
     @Override
     public boolean isAlcoholic() {
-        if(l.getAlcoholPercent() > 0){
+        if(liquid.getAlcoholPercent() > 0){
             return true;
         }
         return false;
