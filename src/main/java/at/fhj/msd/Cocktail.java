@@ -1,8 +1,5 @@
 package at.fhj.msd;
 
-import at.fhj.iit.Drink;
-import at.fhj.iit.Liquid;
-
 import java.util.*;
 
 public class Cocktail extends Drink {
@@ -18,5 +15,20 @@ public class Cocktail extends Drink {
     public Cocktail(String name, List<Liquid> ingredients) {
         super(name);
         this.ingredients = ingredients;
+    }
+
+    @Override
+    public double getVolume() {
+        return 0;
+    }
+
+    @Override
+    public double getAlcoholPercent() {
+        return 0;
+    }
+
+    @Override
+    public boolean isAlcoholic() {
+        return false;
     }
 }
