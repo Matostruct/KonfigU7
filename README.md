@@ -12,7 +12,7 @@
 - [x] maven_detail (Matio)
 - [ ] readme (alle)
 - [ ] bug_hunt (Gernot)
-- [ ] drink (Veit)
+- [x] drink (Veit)
 - [ ] queue (Matio)
 - [ ] javadoc (Gernot)
 - [ ] test (Veit)
