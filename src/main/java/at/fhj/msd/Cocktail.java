@@ -2,7 +2,7 @@ package at.fhj.msd;
 
 import java.util.*;
 
-public class Cocktail extends Drink {
+public class Cocktail extends SimpleDrink {
 
     /**
      * Creates a Drink object with given name and a list of ingredients
@@ -10,25 +10,10 @@ public class Cocktail extends Drink {
      * @param name name of the drink
      * @param List<Liquid> ingredients of the cocktail
      */
-    protected List<Liquid> ingredients;
+    protected List<Liquid> ingredientList;
 
-    public Cocktail(String name, List<Liquid> ingredients) {
-        super(name);
-        this.ingredients = ingredients;
-    }
-
-    @Override
-    public double getVolume() {
-        return 0;
-    }
-
-    @Override
-    public double getAlcoholPercent() {
-        return 0;
-    }
-
-    @Override
-    public boolean isAlcoholic() {
-        return false;
+    public Cocktail(String name, Liquid ingredient) {
+        super(name, ingredient);
+        this.ingredientList = ingredients;
     }
 }
