@@ -1,35 +1,49 @@
 package at.fhj.msd;
 
-// fastly written (not really nice) comments you should adapt
+
+/**
+ * Interface for faster Queue Development, providing basic syntax of programmcalls
+ */
 public interface IQueue {
   /** 
-   * I am a really bad comment
-   * 
-   * fasdfadsffdsadsf
-   * 
-   * fdsasdfadsf
-   * 
-   *  add object to queue, true if okay 
-   * 
-   * i fell asleep on my keyboard...
-   * 
-   * */ 
+   *
+   *  adds a Drink- object to queue, true if okay
+   *
+   **/
   public abstract boolean offer(String obj);
 
-  //returns + del 1st element; null if nothing in there
-   //
+  /**
+   *
+   *  Get an element off the queue
+   *  returns + del 1st element; null if nothing in there
+   *
+   */
+
   public abstract String poll();
 
-  /* 
-  same as poll, if there is nothing in there error NoSuchElementException
+  /**
+   *
+   * Get an element off the queue
+   * returns + del 1st element, if there is nothing in there error NoSuchElementException
+   *
    */
   public abstract String remove();
 
-  // 1st element without dlete, otherwise null
+  /**
+   *
+   * look what the name of the next drink is
+   * 1st element without delete, otherwise null
+   *
+   */
    
   public abstract String peek();
 
-  // element is to peek what remove is to poll
+  /**
+   *
+   * look what the name of the next drink is
+   * 1st element without delete, if there is nothing in there error NoSuchElementException
+   *
+   */
   
   public abstract String element();
 }
