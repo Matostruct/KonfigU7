@@ -1,5 +1,6 @@
 package at.fhj.msd;
 
+
 /**
  * Interface for faster Queue Development, providing basic syntax of programmcalls
  */
