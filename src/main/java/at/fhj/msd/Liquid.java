@@ -1,5 +1,9 @@
 package at.fhj.msd;
 
+/**
+ *
+ *
+ */
 public class Liquid {
 
     private String name;
