@@ -9,13 +9,14 @@
 ### Tasks to finish
 
 - [x] maven (Matio)
-- [x] maven_detail (Matio)
+- [x] maven_detail (gernot)
 - [x] readme (alle)
 - [x] bug_hunt (Gernot)
 - [x] drink (Veit)
-- [ ] queue (Matio)
+- [x] queue (Veit)
 - [x] javadoc (Gernot)
-- [ ] test (Veit)
+- [x] test (Veit)
 - [ ] double_queue (Matio)
-- [ ] maven_site (alle)
+- [x] maven_site (alle)
 
+#### Matio left for another team, so no double_Queue
