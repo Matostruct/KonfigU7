@@ -13,18 +13,18 @@ public class StringQueue implements IQueue {
   private List<String> elements = new ArrayList<String>();
   private int maxSize = 5;
 
-  public StringQueue(int maxsize) {
-    maxSize = maxSize;
-  }
+  public StringQueue(int initialSize) {
+    maxSize = initialSize;
+  } //corrected naming issue (maxsize and maxSize)
 
   @Override
   public boolean offer(String obj) {
-    if (elements.size() != maxSize)
+    if (elements.size() != maxSize) {
       elements.add(obj);
-    else
+      return true; //corrected the order of the return statements
+    } else {
       return false;
-
-    return true;
+    }
   }
 
   @Override
