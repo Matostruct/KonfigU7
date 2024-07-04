@@ -1,23 +1,49 @@
 package at.fhj.msd;
 
+
+/**
+ * Interface for faster Queue Development, providing basic syntax of programmcalls
+ */
 public interface IQueue {
   /** 
-   * I am a better comment, I am almost perfect:
-   * This Interface serves as a blueprint for the StringQueue
-   * and any other classes that might need it.
-   * */
-  //adds an element to the queue and returns true if successful, false if there was no space left
+   *
+   *  adds a Drink- object to queue, true if okay
+   *
+   **/
   public abstract boolean offer(String obj);
 
-  //returns and deletes the 1st element; returns null if there is no element in the Queue
+  /**
+   *
+   *  Get an element off the queue
+   *  returns + del 1st element; null if nothing in there
+   *
+   */
+
   public abstract String poll();
 
-  //same as poll but returns a NoSuchElement exception if the Queue was empty
+  /**
+   *
+   * Get an element off the queue
+   * returns + del 1st element, if there is nothing in there error NoSuchElementException
+   *
+   */
   public abstract String remove();
 
-  //returns the 1st element without deleting it; if there is no element in the Queue returns null
+  /**
+   *
+   * look what the name of the next drink is
+   * 1st element without delete, otherwise null
+   *
+   */
+   
   public abstract String peek();
 
-  //same as peek but returns a NoSuchElement exception if the Queue was empty
+  /**
+   *
+   * look what the name of the next drink is
+   * 1st element without delete, if there is nothing in there error NoSuchElementException
+   *
+   */
+  
   public abstract String element();
 }
