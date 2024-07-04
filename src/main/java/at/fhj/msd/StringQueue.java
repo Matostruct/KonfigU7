@@ -1,4 +1,7 @@
 package at.fhj.msd;
+/**
+ * Class to implement a iQueue, a Queue of drinks
+ */
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,10 +16,19 @@ public class StringQueue implements IQueue {
   private List<String> elements = new ArrayList<String>();
   private int maxSize = 5;
 
+  /**
+   * Constructor, called with int value for the size of the Queue
+   * @param initialSize
+   */
   public StringQueue(int initialSize) {
     maxSize = initialSize;
   } //corrected naming issue (maxsize and maxSize)
 
+  /**
+   * offer, called with int value for the size of the Queue
+   * @param obj put a Drink Objekt ontop of the Drink queue
+   * @return boolean if offer succeeded or not
+   */
   @Override
   public boolean offer(String obj) {
     if (elements.size() != maxSize) {
@@ -26,6 +38,15 @@ public class StringQueue implements IQueue {
       return false;
     }
   }
+
+  /**
+   *
+   * gets an element off the queue
+   * returns + del 1st element, if there is nothing in there error NoSuchElementException
+   * @return name of Drink , element
+   * @return if nothing in there -> if queue is empty
+   *
+   */
 
   @Override
   public String poll() {
@@ -38,6 +59,14 @@ public class StringQueue implements IQueue {
     return element;
   }
 
+  /**
+   *
+   * gets an element off the queue
+   * returns + del 1st element, if there is nothing in there error NoSuchElementException
+   * @return name of Drink , element
+   * @throws NoSuchElementException if nothing in there -> if queue is empty
+   *
+   */
   @Override
   public String remove() {
     String element = poll();
@@ -47,7 +76,12 @@ public class StringQueue implements IQueue {
 
     return element;
   }
-
+  /**
+   *
+   * look what the name of the next drink is
+   * @return 1st element without delete, otherwise null
+   *
+   */
   @Override
   public String peek() {
     String element;
@@ -58,6 +92,13 @@ public class StringQueue implements IQueue {
 
     return element;
   }
+  /**
+   *
+   * look what the name of the next drink is
+   * @return 1st element without delete,
+   * @throws NoSuchElementException if there is nothing in there error
+   *
+   */
 
   @Override
   public String element() {
