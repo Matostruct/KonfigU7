@@ -105,7 +105,7 @@ public class StringQueueTest {
 
     @DisplayName("Testing remove() Method for a StringQueue with size 0")
     @Test
-    public void testZero() {
+    public void testRemoveZero() {
         assertThrows(NoSuchElementException.class, () -> stringQueue0.remove());
     }
 
