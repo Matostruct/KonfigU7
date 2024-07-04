@@ -52,7 +52,7 @@ public class StringQueue implements IQueue {
   public String poll() {
     String element = peek();
 
-    if (elements.size() == 0) {
+    if (element != null) { //changed from(elements.size() == 0) since the later doesn't work correctly
       elements.remove(0);
     }
 
@@ -70,11 +70,11 @@ public class StringQueue implements IQueue {
   @Override
   public String remove() {
     String element = poll();
-    element = "";
+    // removed (element = "";) since you can't set a null element to an empty string
     if (element == null)
       throw new NoSuchElementException("there's no element any more");
-
-    return element;
+    else //added an else statement to prevent the function from returning a null element
+      return element;
   }
   /**
    *
@@ -85,7 +85,7 @@ public class StringQueue implements IQueue {
   @Override
   public String peek() {
     String element;
-    if (elements.size() > 0)
+    if (!elements.isEmpty())
       element = elements.get(0);
     else
       element = null;
