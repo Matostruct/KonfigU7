@@ -2,7 +2,7 @@
 ## -By The A-Team-
 ### Consisting of
 
-- Matio Tawdrous
+- Matio Tawdrous (left to help other guy)
 - Gernot Schabkar
 - Veit Kramer-Schöggl
 
@@ -20,3 +20,22 @@
 - [x] maven_site (alle)
 
 #### Matio left for another team, so no double_Queue
+
+## Usage
+
+- Drink abstract class
+- Liquid class
+- cocktail class
+- SimpleDring Interface implementation of IQueue
+
+## License
+
+- Kramer Veit
+- Schabkar Gernot 
+
+## Dokumentation
+
+Javadoc, generate with
+```
+mvn site
+```  
