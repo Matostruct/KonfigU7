@@ -20,17 +20,10 @@ public class StringQueueTest {
         stringQueue1 = new StringQueue(4);
     }
 
-    @BeforeEach
-    public void beforeEach() {
-        StringQueue stringQueue0 = new StringQueue(0);
-    }
-
     @AfterEach
     public void tearDown() {
         StringQueue stringQueue0 = null;
-//        StringQueue stringQueue1 = null;
         StringQueue stringQueue2 = null;
-//        StringQueue stringQueue3 = null;
     }
 
     @DisplayName("Testing peek() Method for a StringQueue with size 0")

@@ -1,11 +1,9 @@
 package at.fhj.msd;
 /**
- * Class to implement a iQueue, a Queue of drinks
+ * Class to implement a iQueue, a Queue for strings
  */
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.NoSuchElementException;
+import java.util.*;
 
 // there's some Bugs included, try to debug the code and fix the Bugs
 // there are different Bugs, wrong implementation, typos, ...
