@@ -1,0 +1,11 @@
+<project name="Too much Drinking">
+    <publishDate position="right"/>
+    <version position="left"/>
+    <body>
+        <menu name="Overview">
+            <item name="Gernot" href="member1.html"/>
+            <item name="Veit" href="member2.html"/>
+        </menu>
+        <menu ref="reports"/>
+    </body>
+</project>
