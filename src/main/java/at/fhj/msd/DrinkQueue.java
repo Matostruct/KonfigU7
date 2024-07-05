@@ -8,19 +8,15 @@ import java.util.*;
 
 public class DrinkQueue {
 
-    private static int size = 0;
+    private int size = 0;
     private LinkedListElement head;
     private LinkedListElement tail;
-
-    public LinkedListElement getHead() {
-        return head;
-    }
-
-    public LinkedListElement getTail() {
-        return tail;
-    }
-
     private int maxSize;
+
+    public int getSize() {
+        return size;
+    }
+
     public DrinkQueue(int maxSize) {
         this.maxSize = maxSize;
     }
@@ -41,7 +37,7 @@ public class DrinkQueue {
      * @return boolean true if successfully added, false if not
      */
     public boolean offer(Drink drink){
-        if (size <= maxSize) {
+        if (size < maxSize) {
             if (isEmpty()) {
                 head = tail = new LinkedListElement(drink, null, null);
             } else if (head == tail) { //means that there is only one element in the list
