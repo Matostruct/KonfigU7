@@ -12,7 +12,7 @@ public class Cocktail extends Drink {
      * @param name name of the drink
      * @param List<Liquid> ingredients of the cocktail
      */
-    protected TreeSet<Liquid> ingredientList;
+    protected List<Liquid> ingredientList;
 
     /**
      * Coctail Constructor, creates a new Coctail with name and ingredients
@@ -20,7 +20,7 @@ public class Cocktail extends Drink {
      * @param name   String
      * @param ingredientList  Treeset of Liquids
      */
-    public Cocktail(String name, TreeSet<Liquid> ingredientList) {
+    public Cocktail(String name, List<Liquid> ingredientList) {
         super(name);
         this.ingredientList = ingredientList;
     }
