@@ -1,6 +1,6 @@
 package at.fhj.msd;
 /**
- * Class Coctail, extends Drink with ingredients and Alcoholic Information
+ * Class Cocktail, extends Drink with ingredients and Alcoholic Information
  */
 import java.util.*;
 
@@ -15,10 +15,10 @@ public class Cocktail extends Drink {
     protected List<Liquid> ingredientList;
 
     /**
-     * Coctail Constructor, creates a new Coctail with name and ingredients
+     * Cocktail Constructor, creates a new cocktail with name and ingredients
      *
      * @param name   String
-     * @param ingredientList  Treeset of Liquids
+     * @param ingredientList  List of Liquids
      */
     public Cocktail(String name, List<Liquid> ingredientList) {
         super(name);
@@ -26,29 +26,44 @@ public class Cocktail extends Drink {
     }
 
     /**
-     * Gets the coctail Alcohol. Our coctails are without any!
-     * @return 0
+     * Calculates the volume of the cocktail by adding together
+     * the volume of all ingredients
+     *
+     * @return volume of all ingredients added together
      */
     @Override
     public double getVolume() {
-        return 0;
+        double volume =0.0;
+        for (Liquid liquid : ingredientList) {
+            volume += liquid.getVolume();
+        }
+        return volume;
     }
 
     /**
-     * Gets the coctail Alcohol. Our coctails are without any!
-     * @return 0
+     * Calculates the alcohol content of the cocktail by calculating
+     * the volume of alcohol per ingredient and adding them together
+     * dividing the result by the added volume
+     *
+     * @return average alcohol percentage of the cocktail
      */
     @Override
     public double getAlcoholPercent() {
-        return 0;
+        double alcoholPercent = 0.0;
+        for (Liquid liquid : ingredientList) {
+            alcoholPercent += (liquid.getAlcoholPercent() * liquid.getVolume());
+        }
+        return (alcoholPercent / getVolume());
     }
 
     /**
-     * Returns, if the Coctail contains Alcohol. It doesnt.
-     * @return false
+     * Returns true if the cocktail contains any ingredient that
+     * has alcohol in it
+     *
+     * @return boolean true if alcoholic false if not
      */
     @Override
     public boolean isAlcoholic() {
-        return false;
+        return getAlcoholPercent() > 0;
     }
 }
