@@ -14,19 +14,31 @@ public class DrinkClassesTest {
 
     private static Liquid vodka;
     private static Liquid gin;
+    private static Liquid water;
+    private static Liquid tonicWater;
     private static SimpleDrink simpleDrinkVodkaGorbatschow;
     private static Cocktail cocktailVodka_Gin;
+    private static SimpleDrink mineralWater;
+    private static Cocktail dilutedTonicWater;
     private static List<Liquid> ingredientList;
+    private static List<Liquid> ingredientList2;
 
     @BeforeEach
     public void setUp() {
         vodka = new Liquid("Vodka", 1, 0.80);
         gin = new Liquid("Gin", 0.25, 0.40);
+        water = new Liquid("Water", 0.5, 0.00);
+        tonicWater = new Liquid("TonicWater", 0.33, 0.00);
         ingredientList = new LinkedList<>();
         ingredientList.add(vodka);
         ingredientList.add(gin);
+        ingredientList2 = new LinkedList<>();
+        ingredientList2.add(water);
+        ingredientList2.add(tonicWater);
         simpleDrinkVodkaGorbatschow = new SimpleDrink("Vodka Gorbatschow", vodka);
         cocktailVodka_Gin = new Cocktail("Vodka-Gin", ingredientList);
+        mineralWater = new SimpleDrink("Roemerquelle", water);
+        dilutedTonicWater = new Cocktail("Tonic water with mineral water", ingredientList2);
     }
 
     /**
@@ -62,4 +74,12 @@ public class DrinkClassesTest {
         assertEquals(0.72, cocktailVodka_Gin.getAlcoholPercent());
     }
 
+    @DisplayName("Testing the isAlcoholic() Method")
+    @Test
+    public void testIsAlcoholic() {
+        assertTrue(simpleDrinkVodkaGorbatschow.isAlcoholic());
+        assertTrue(cocktailVodka_Gin.isAlcoholic());
+        assertFalse(mineralWater.isAlcoholic());
+        assertFalse(dilutedTonicWater.isAlcoholic());
+    }
 }
